@@ -1,0 +1,68 @@
+@import 'vars.css';
+
+main {
+    section {
+        display: grid;
+        gap: var(--p-sm);
+        @media only screen and (min-width: 480px){
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+        @media only screen and (min-width: 660px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @media only screen and (min-width: 780px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        article {
+            background-color: var(--acc);
+            display: flex;
+            flex-direction: column;
+            border-radius: var(--p-sm);
+            @media only screen and (min-width: 660px){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: var(--p-sm);
+            }
+            div:first-child {
+                padding: var(--p-sm);
+                display: flex;
+                flex-direction: column;
+                gap: var(--p-xs);
+                height: 100%;
+                @media only screen and (min-width: 660px){
+                    height: auto;
+                    
+                }
+                p:nth-child(2){
+                    text-overflow: ellipsis;
+                }
+                p:last-child {
+                    background-color: var(--prim);
+                    color: var(--white);
+                    width: fit-content;
+                    padding: var(--p-xs);
+                    border-radius: var(--p-xs);
+                    margin-top: auto;
+                }
+            }
+            div:last-child {
+                order: -1;
+                img {
+                    border-radius: var(--p-sm) var(--p-sm) 0 0;
+                    height: 100%;
+                    object-fit: cover;
+                    @media only screen and (min-width: 660px){
+                        border-radius: var(--p-sm);
+                    }
+                }
+                @media only screen and (min-width: 660px){
+                    order: 1;
+                }
+                @media only screen and (min-width: 780px){
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+    }
+}

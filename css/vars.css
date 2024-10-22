@@ -1,0 +1,13 @@
+:root {
+    --prim: #333399;
+    --sec: #FF3333;
+    --acc: #FFFF66;
+    --black: #333333;
+    --white: #FAF9F6;
+    --white-200: #CCCCFF;
+
+    --p-l: 1.25rem;
+    --p-m: 1rem;
+    --p-sm: 0.75rem;
+    --p-xs: 0.5rem;
+}

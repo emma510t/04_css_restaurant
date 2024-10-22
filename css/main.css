@@ -1,0 +1,80 @@
+@import 'vars.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+p {
+    color: var(--black);
+}
+
+header:has(h1) {
+    padding: var(--p-m);
+    background-color: var(--sec);
+    color: var(--white);
+    text-align: center;
+}
+
+nav {
+    padding: var(--p-m);
+    background-color: var(--prim);
+    text-align: center;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--p-sm);
+
+        li .hl {
+            color: var(--acc);
+        }
+        
+        @media (max-width: 480px){
+            li:nth-child(even) {
+                padding: var(--p-sm) 0;
+                border-top: 1px var(--white) solid;
+                border-bottom: 1px var(--white) solid;
+            }
+            
+        }
+        @media only screen and (min-width: 480px){
+            flex-direction: row;
+        }
+        a {
+            color: var(--white);
+        }
+    }
+}
+
+main {
+    padding: var(--p-m);
+    max-width: 860px;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--prim);
+    padding: var(--p-m);
+    width: 100%;
+    bottom: 0;
+    > * {
+       color: var(--white);
+       margin: auto;
+       width: fit-content;
+    }
+     @media only screen and (min-width: 480px){
+            position: fixed;
+        }
+}

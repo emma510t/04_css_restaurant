@@ -1,0 +1,52 @@
+@import 'vars.css';
+
+main {
+    display: grid;
+    gap: var(--p-sm);
+     @media only screen and (min-width: 480px){
+         
+    }
+    @media only screen and (min-width: 660px){
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+        img {
+            order: -1;
+            border-radius: var(--p-sm);
+            @media only screen and (min-width: 660px){
+                grid-row: span 2;
+                order: 0;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        address {
+            display: flex;
+            flex-direction: column;
+            gap: var(--p-m);
+            font-style: normal;
+            a {
+                font-weight: 600;
+            }   
+        }
+        fieldset {
+            border-radius: var(--p-sm);
+            padding: var(--p-sm);
+            display: flex;
+            flex-direction: column;
+            gap: var(--p-sm);
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: var(--p-xs);
+            }
+            button {
+                background-color: var(--prim);
+                color: var(--white);
+                padding: var(--p-xs) var(--p-m);
+                border-radius: var(--p-xs);
+                width: fit-content;
+                border: none;
+            }
+    }
+}

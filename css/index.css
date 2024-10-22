@@ -1,0 +1,33 @@
+@import 'vars.css';
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--p-sm);
+    @media only screen and (min-width: 480px){
+        grid-template-columns: repeat(2, 1fr);
+        }
+    section ul {
+        padding-top: var(--p-sm);
+        li {
+        color: var(--prim);
+        font-size: var(--p-l);
+        font-weight: 600;
+    }
+}
+    section:last-of-type{
+        background-color: var(--white-200);
+        padding: var(--p-sm);
+         @media only screen and (min-width: 480px){
+            grid-column: span 2;
+            margin: var(--p-xs);
+         }
+    }
+    img {
+        border-radius: var(--p-sm);
+        grid-row: 1;
+        @media only screen and (min-width: 480px){
+        grid-column: 2;
+        }
+    }
+}
